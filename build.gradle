@@ -1,0 +1,22 @@
+subprojects {
+  apply plugin: 'java'
+  apply plugin: 'ivy-publish'
+
+  group = 'org.example'
+  version = '1.0'
+
+  publishing {
+    publications {
+      myLibrary(IvyPublication) {
+        from components.java
+      }
+    }
+
+    repositories {
+      ivy {
+        name = 'myRepo'
+        url = "file://${buildDir}/repo"
+      }
+    }
+  }
+}

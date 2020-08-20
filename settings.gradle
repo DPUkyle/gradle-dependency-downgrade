@@ -1,0 +1,3 @@
+rootProject.name = 'gradle-dependency-downgrade'
+
+include 'api', 'impl'

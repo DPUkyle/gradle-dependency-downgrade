@@ -1,0 +1,10 @@
+repositories {
+  jcenter()
+}
+
+dependencies {
+  compile 'commons-lang:commons-lang:2.3'
+  compile project(path: ':api') // api leaks commons-lang:2.6
+  // TODO which will gradle publish in the descriptor? commons-lang:2.3 or 2.6 ??
+
+}
